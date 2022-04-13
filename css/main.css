@@ -1,0 +1,290 @@
+/* 
+====
+  IMPORTS_GRP
+====
+*/
+@import './reset.css';
+@import './variables.css';
+
+/* 
+====
+  LAYOUT_GRP
+====
+*/
+
+/* 
+  _BASE_GRP
+*/
+body {
+  display: grid;
+  place-items: center;
+  background: url(../assets/images/bg-top.svg) top right no-repeat
+    var(--background-page);
+  background-position-x: 175%;
+
+  font: var(--font-weight) 1rem var(--font-family);
+}
+
+/* 
+  _PRICING_SWITCH_GRP
+*/
+h1 {
+  font-size: var(--font-size-2x);
+  color: var(--text-primary);
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.toggle-switch-flex {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4.5rem;
+}
+
+.price-plan {
+  color: var(--text-secondary);
+}
+
+.toggle-label {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-btn {
+  position: relative;
+  display: inline-block;
+  border-radius: 2rem;
+  border: 1px solid var(--background-secondary);
+  background: var(--background-secondary);
+  width: 70px;
+  height: 38px;
+  cursor: pointer;
+
+  transition: var(--transition-all);
+}
+
+.toggle-btn::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 3px;
+  left: 34px;
+  right: auto;
+  height: 29px;
+  width: 24px;
+  padding: 0 3px;
+  border-radius: 100%;
+  background-color: var(--background-primary);
+
+  transition: var(--transition-all);
+}
+
+.toggle-input:checked + .toggle-btn:before {
+  content: '';
+  left: 4px;
+}
+
+.toggle-btn:hover {
+  background: var(--input-price-hover);
+  border: 1px solid var(--input-price-hover);
+}
+
+/* 
+  _PLANS_GRP
+*/
+#plans-container {
+  width: 65%;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+}
+
+.section-area {
+  background: var(--background-primary);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+
+  transition: var(--transition-all);
+  transform: scale(1);
+}
+
+.section-area:hover {
+  transform: scale(1.01);
+}
+
+.section-container {
+  width: 85%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+/* 
+  __HEADING_GRP
+*/
+.plan-title {
+  font-size: 1rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.plan-value {
+  font-size: var(--font-size-4x);
+  color: var(--text-value);
+  margin-bottom: 2rem;
+}
+
+/* 
+  __ADVANTAGES_GRP
+*/
+.horizontal-line {
+  height: 1px;
+  width: 100%;
+  background: var(--line-background);
+}
+
+.plan-advantages {
+  margin: 1rem 0;
+}
+
+/* 
+  __MORE_INFO_GRP
+*/
+.learn-more {
+  width: 100%;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--background-primary);
+  background: var(--background-secondary);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  text-align: center;
+
+  transition: var(--transition-all);
+}
+
+.learn-more:hover {
+  border: 1px solid var(--button-hover);
+  background: var(--background-primary);
+  color: var(--text-fourth);
+}
+
+/* 
+  __SECTION_SELECTED_GRP
+*/
+.section-area.section-selected {
+  background: var(--background-tertiary);
+  color: var(--text-tertiary);
+}
+
+.section-area.section-selected {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.section-area.section-selected .plan-value {
+  color: var(--text-tertiary);
+}
+
+.section-area.section-selected .horizontal-line {
+  background-color: var(--background-primary);
+}
+
+.section-area.section-selected .learn-more {
+  background: var(--background-primary);
+  color: var(--text-fourth);
+}
+
+.section-area.section-selected .learn-more:hover {
+  border: 1px solid var(--background-primary);
+  background: none;
+  color: var(--text-tertiary);
+}
+
+/* 
+====
+  MEDIA_QUERIES_GRP
+====
+*/
+
+/* 
+  768px_GRP
+*/
+@media (min-width: 768px) {
+  /* 
+    _BASE_GRP
+  */
+  body {
+    background-position-x: 130%;
+  }
+}
+
+/* 
+  1024px_GRP
+*/
+@media (min-width: 1024px) {
+  /* 
+   _BASE_GRP
+  */
+  html {
+    height: 100%;
+  }
+
+  body {
+    background-image: url(../assets/images/bg-top.svg),
+      url(../assets/images/bg-bottom.svg);
+    background-position: top right, bottom left;
+    background-repeat: no-repeat, no-repeat;
+    background-color: var(--background-page);
+
+    font: var(--font-weight) 1rem var(--font-family);
+  }
+  /* 
+    _PRICING_SWITCH_GRP
+  */
+  h1 {
+    margin-top: 4rem;
+  }
+
+  .toggle-switch-flex {
+    margin-bottom: 5rem;
+  }
+
+  .toggle-btn::before {
+    top: 3px;
+    height: 30px;
+  }
+
+  /* 
+    _PLANS_GRP
+  */
+  #plans-container {
+    max-width: 550px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-content: center;
+    gap: 0.5rem;
+  }
+
+  .section-area {
+    padding: 0 4rem;
+  }
+
+  .section-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* 
+    __SECTION_SELECTED_GRP
+  */
+  .section-area.section-selected {
+    transform: scale(1.1, 1.05);
+    z-index: 1;
+  }
+}

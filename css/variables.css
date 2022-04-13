@@ -1,0 +1,66 @@
+/* 
+====
+  VARIABLES_GRP
+====
+*/
+
+:root {
+  /* 
+    COLOURS_GRP
+  */
+
+  --very-light-grayish-blue: hsl(240, 79%, 99%);
+  --light-grayish-blue: hsl(234, 14%, 74%);
+  --grayish-blue: hsl(233, 13%, 49%);
+  --dark-grayish-blue: hsl(232, 13%, 33%);
+
+  --gradient-main: linear-gradient(
+    to bottom,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+
+  --background-page: hsl(270, 25%, 97%);
+  --background-primary: var(--very-light-grayish-blue);
+  --background-secondary: hsl(237, 63%, 68%);
+  --background-tertiary: var(--gradient-main);
+
+  --input-price-hover: hsl(236, 72%, 79%);
+  --button-hover: hsl(237, 63%, 64%);
+  --button-hover-active: red;
+
+  --text-primary: var(--grayish-blue);
+  --text-secondary: var(--light-grayish-blue);
+  --text-tertiary: var(--very-light-grayish-blue);
+  --text-fourth: hsl(237, 63%, 64%);
+  --text-value: var(--dark-grayish-blue);
+
+  --line-background: var(--light-grayish-blue);
+
+  --box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+  /* 
+    FONTS_GRP
+  */
+
+  --font-weight: 700;
+  --font-family: 'Montserrat', sans-serif;
+
+  --font-size-1x: 1rem;
+  --font-size-2x: 2rem;
+  --font-size-4x: 4rem;
+
+  /* 
+    MEASURES_GRP
+  */
+
+  /* 
+    TRANSITIONS_GRP
+  */
+  --transition-all: all 0.3s ease;
+
+  /* 
+    DEBBUGING_GRP
+  */
+  --debbug: 1px solid red;
+}

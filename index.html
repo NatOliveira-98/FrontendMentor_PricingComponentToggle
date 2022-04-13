@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- PAGE_INFO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Component with Toggle</title>
+
+    <!-- PAGE_TAB_ICON -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      sizes="32x32"
+      href="./assets/icons/favicon-32x32.png"
+    />
+
+    <!-- CUSTOM_STYLES -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- PRICING_SWITCH -->
+    <h1>Our Pricing</h1>
+
+    <!-- SWITCH -->
+    <div class="toggle-switch-flex">
+      <p class="price-plan">Annually</p>
+      <label for="price-switch-toggle" class="toggle-label">
+        <input
+          type="checkbox"
+          name="toggle-price"
+          id="price-switch-toggle"
+          class="toggle-input"
+        />
+        <span class="toggle-btn"></span>
+      </label>
+      <p class="price-plan">Monthly</p>
+    </div>
+
+    <!-- PLANS_GRP -->
+    <div id="plans-container"></div>
+
+    <!-- SCRIPTS -->
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
+
+<!-- 
+  
+  ToDo;
+
+  - CLEAN UP THE PROJECT;
+    - specially the CSS files;
+    
+-->
